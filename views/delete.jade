@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+ h1
+    p.
+      ENTER TITLE FOR DELETING THE BLOG
+  form(action='/users/deletedata' method='post')
+      | Title:
+      br
+      input(type='text', name='title')
+      br
+      br
+      input(type='submit', value='Delete')

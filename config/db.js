@@ -1,0 +1,1 @@
+module.exports = { "url" : "mongodb://blog:blog@ds031571.mongolab.com:31571/blog" }

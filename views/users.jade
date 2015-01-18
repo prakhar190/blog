@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1
+    p.
+      INPUT YOUR DATA
+  form(action='/users/savedata' method='post')
+      | Title:
+      br
+      input(type='text', name='title')
+      br
+      | Body:
+      br
+      textarea(name='address', rows='3', cols='30')
+      br
+      br
+      input(type='submit', value='Save')
+      br
+      br
+      
