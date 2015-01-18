@@ -5,16 +5,16 @@ block content
     p.
       INPUT YOUR DATA
   form(action='/users/savedata' method='post')
-      | Title:
-      br
-      input(type='text', name='title')
-      br
-      | Body:
-      br
-      textarea(name='address', rows='3', cols='30')
-      br
-      br
-      input(type='submit', value='Save')
-      br
-      br
+    .row
+      .col-md-3
+        img(src='../images/1.jpg')
+      .col-md-6
+        div.form-group
+          label Title:
+          input(type='text', name='title', class='form-control')
+        div.form-group
+          label Body:
+          textarea(name='address', rows='3', cols='30' class='form-control')
+        input(type='submit', value='Save', class="btn btn-default")
+
       
