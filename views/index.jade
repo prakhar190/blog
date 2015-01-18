@@ -1,5 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+ h1
+    p Welcome to #{title}
+ center
+   img(src='../images/1.jpg')
+ 
+  
+  div
+     each item in data
+      li= item.title+"----"+item.address 
+   
+  a(href='users')  Create a Blog
+  br
+  br 
+  a(href='update') Update a Blog
+  br
+  br
+  a(href='/users/read') Read a Blog
+  br
+  br
+  a(href='/users/delete') Delete a Blog
+  
+
+    
