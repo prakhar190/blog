@@ -36,5 +36,27 @@ router.get('/read',function(req, res){
 	
 	res.render('read');
 });
+router.post('/readdata',function(req,res){
+	var getResult = function(fn){
+		
+		
+	    User.findOne({title:req.param('title')},function(err, data) {
+	    	if (err) return fn(err)
+         
+            console.log(data.title);
+            
+        	return fn(null,data);
+            
+		})  
+	}
+
+	getResult(function(err,data){
+		
+		if (err) console.log(err);
+		console.log(data);
+		res.render('readdata', {data:data});
+	});
+
+});
 
 module.exports = router;

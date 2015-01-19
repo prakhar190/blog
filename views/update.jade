@@ -4,16 +4,20 @@ block content
   h1
     p.
       UPDATE YOUR DATA
+ 
+  
   form(action='/update/updatedata' method='post')
-      | Title:
-      br
-      input(type='text', name='title')
-      br
-      | Body:
-      br
-      textarea(name='address', rows='3', cols='30')
-      br
-      br
-      input(type='submit', value='Update')
-      
-      
+          .row
+              .col-md-4
+                 img(src='../images/5.jpg')
+              .col-md-6.text-left 
+                  br  
+                  label Title:
+                  input(type='text', name='title',class='form-control')
+                  label Body:
+                  textarea(name='address', rows='3', cols='30',class='form-control')
+                  br
+                  .text-center
+                       input(type='submit', value='Update',class='btn btn-success')
+            
+              

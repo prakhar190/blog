@@ -1,26 +1,42 @@
 extends layout
 
 block content
- h1
-    p Welcome to #{title}
- center
-   img(src='../images/1.jpg')
- 
+ .row 
+    .col-md-3
+      img(src='../images/9.jpg')
+    .col-md-6
+        .text-center
+            h1
+              Label Welcome to #{title}
+            h2
+              a(href='users')  Create a Blog
+              br
+              br
+              a(href='update') Update a Blog
+              br
+              br
+              a(href='/users/read') Read a Blog
+              br
+              br
+              a(href='/users/delete') Delete a Blog
+    .col-md-3
+       img(src='../images/9.jpg')
+        
   
-  div
-     each item in data
-      li= item.title+"----"+item.address 
-   
-  a(href='users')  Create a Blog
-  br
-  br 
-  a(href='update') Update a Blog
-  br
-  br
-  a(href='/users/read') Read a Blog
-  br
-  br
-  a(href='/users/delete') Delete a Blog
-  
+        
+          
+  .row
 
+    .col-md-3
+      .text-left
+        div 
+          ul
+            each item in data
+             li= item.title+"----"+item.address 
+    .col-md-3.col-md-offset-6
+        img(src='../images/1.jpg') 
     
+    
+
+   
+  

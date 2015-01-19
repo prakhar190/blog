@@ -5,6 +5,7 @@ block content
     p.
       INPUT YOUR DATA
   form(action='/users/savedata' method='post')
+    
     .row
       .col-md-3
         img(src='../images/1.jpg')
@@ -15,6 +16,5 @@ block content
         div.form-group
           label Body:
           textarea(name='address', rows='3', cols='30' class='form-control')
-        input(type='submit', value='Save', class="btn btn-default")
-
-      
+        input(type='submit', value='Save', class="btn btn-primary")
+    

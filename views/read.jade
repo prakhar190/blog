@@ -1,14 +1,18 @@
 extends layout
 
 block content
+
  h1
     p.
-      INPUT YOUR DATA
+      ENTER TITLE FOR READING THE BLOG
+    br
   form(action='/users/readdata' method='post')
-      | Title:
-      br
-      input(type='text', name='title')
-      br
-      input(type='submit', value='Read')
-
- 
+     .row
+        .col-md-3
+            img(src='../images/8.jpg')
+        .col-md-6.col-md-offset-1
+            label Title:
+            br
+            input(type='text', name='title',class='form-group')
+            br
+            input(type='submit', value='Read',class='btn btn-success')
